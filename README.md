@@ -88,3 +88,40 @@ Python语言、hadoop大数据技术、pyspark、mysql、flask框架、pyEcharts
 7. 选中server.py，右键run，启动服务
 
 8. 看到地址后，双击地址，自动打开浏览器，在浏览器中查看可视化效果。
+
+## 项目结构
+
+### 文件结构
+
+```
+Based-on-the-data-analysis-of-Zhilian-Recruitment-using-PySpark/
+├── templates/
+│   ├── components.html
+│   ├── macro
+│   ├── nb_components.html
+│   ├── nb_jupyter_globe.html
+│   ├── nb_jupyter_lab.html
+│   ├── nb_jupyter_lab_tab.html
+│   ├── nb_jupyter_notebook.html
+│   ├── nb_jupyter_notebook_tab.html
+│   ├── nb_nteract.html
+│   ├── simple_chart.html
+│   ├── simple_globe.html
+│   ├── simple_page.html
+│   ├── simple_tab.html
+│   └── temp_charts.html
+├── README.md
+├── app.py
+├── cityjob.csv
+├── comptypenum.csv
+├── data.txt
+├── py_sparkdata.py
+├── salary.csv
+└── sprider-zhilian.py
+```
+
+### 主要文件说明：
+- `sprider-zhilian.py`：实现智联招聘网站数据爬取，包含请求处理、HTML解析和数据存储功能
+- `py_sparkdata.py`：Spark数据分析流程，包含HDFS数据读取、RDD转换、DataFrame操作和结果输出
+- `app.py`：基于Flask+pyecharts的可视化系统，集成柱状图、饼图等多种可视化图表
+- `templates/`：存放Echarts可视化模板文件，支持交互式数据展示
